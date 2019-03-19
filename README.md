@@ -38,6 +38,7 @@ Returns a call to amb with `#t` and `#f` as arguments.
 Arguments: `vars` - a list of variable names (no duplicates)
 
 Returns an association list where each cell is in the form of `(variable_name, (get-value))`
+
 ---
 
 `(lookup target alist)`
