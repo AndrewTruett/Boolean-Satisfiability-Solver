@@ -128,6 +128,8 @@ Arguments:
 Returns the result of call to the `action` procedure. The driver procedure wraps all other procedures, this is necessary to allow for vectors to maintain state outside of procedure calls. This procedure should be used to call any other procedures.
 
 ## Usage
+Use the language Pretty Big, R5RS does not permit the use of requre.
+
 The procedures of interest in this project are `satisfiable?` and `list-solutions`.
 
 ### Supported Boolean Operators
