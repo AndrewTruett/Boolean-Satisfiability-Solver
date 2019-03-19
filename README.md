@@ -138,4 +138,3 @@ The supported boolean operators are `AND`, `OR`, `NAND`, `XOR`, `NOT`, and `->`.
 
 `(driver 'list-solutions '(a OR b))`
 
-Use the `make-and`, `make-or`, etc constructors to create long and complex boolean expressions.
