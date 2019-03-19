@@ -128,7 +128,7 @@ Arguments:
 Returns the result of call to the `action` procedure. The driver procedure wraps all other procedures, this is necessary to allow for vectors to maintain state outside of procedure calls. This procedure should be used to call any other procedures.
 
 ## Usage
-Use the language Pretty Big, R5RS does not permit the use of requre.
+Use the language Pretty Big, R5RS does not permit the use of `requre`.
 
 The procedures of interest in this project are `satisfiable?` and `list-solutions`.
 
@@ -140,3 +140,5 @@ The supported boolean operators are `AND`, `OR`, `NAND`, `XOR`, `NOT`, and `->`.
 
 `(driver 'list-solutions '(a OR b))`
 
+### Conclusion
+This project was completed for CSc 335 Programming Language Paradigms at the City College of New York, Spring 2018, by Andrew Truett and Vagan Grigoryan. See the paper [here](https://docs.google.com/document/d/1l-6J6xjwlY66eNgGOIVVk1WFcx1O3dzpxMmplDwAIp8/edit?usp=sharing)
