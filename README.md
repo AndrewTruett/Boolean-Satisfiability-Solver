@@ -15,26 +15,27 @@ The assert function is used alongside the amb operator to create constraints tha
 (let ((x (amb #t #f)))
   (assert (not x))
   (list x))
-  ```
-  Output: `(#f)`
+```
+Output: `(#f)`
  
 #### Using numbers
- ```scheme
+```scheme
   (let ((x (amb 1 2 3))
         (y (amb 2 3 4)))
     (assert (< (+ x y) 4))
     (list x y))
-  ```
-  Output: `(1 2)`
+```
+Output: `(1 2)`
   
-  ## Procedures
-  `(get-value)`
+## Procedures
+###`(get-value)`
   
- Returns a call to amb with `#t` and `#f` as arguments.
+Returns a call to amb with `#t` and `#f` as arguments.
  
- `(assign-vals vars)`
+###`(assign-vals vars)`
  
- Arguments: vars - a list of variable names (no duplicates)
- Returns an association list where each cell is in the form of `(variable_name, (get-value))`
+Arguments: vars - a list of variable names (no duplicates)
+
+Returns an association list where each cell is in the form of `(variable_name, (get-value))`
  
  
