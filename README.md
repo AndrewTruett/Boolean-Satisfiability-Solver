@@ -16,3 +16,20 @@ The assert function is used alongside the amb operator to create a list of const
   (list x))
   ```
   Output: `(#f)`
+  
+  ```scheme
+  (let ((x (amb #t #f)))
+    (assert x)
+    (list x))
+  ```
+  Output: `(#t)`
+
+ ```scheme
+  (let ((x (amb 1 2 3))
+        (y (amb 2 3 4)))
+    (assert (< (+ x y) 4))
+    (list x y))
+  ```
+  Output: `(1 2)`
+  
+  
