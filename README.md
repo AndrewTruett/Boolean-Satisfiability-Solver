@@ -141,4 +141,4 @@ The supported boolean operators are `AND`, `OR`, `NAND`, `XOR`, `NOT`, and `->`.
 `(driver 'list-solutions '(a OR b))`
 
 ### Conclusion
-This project was completed for CSc 335 Programming Language Paradigms at the City College of New York, Spring 2018, by Andrew Truett and Vagan Grigoryan. See the paper [here](https://docs.google.com/document/d/1l-6J6xjwlY66eNgGOIVVk1WFcx1O3dzpxMmplDwAIp8/edit?usp=sharing)
+This project was completed for CSc 335 Programming Language Paradigms at the City College of New York, Spring 2018, by Andrew Truett and Vagan Grigoryan. See the paper [here](https://docs.google.com/document/d/1l-6J6xjwlY66eNgGOIVVk1WFcx1O3dzpxMmplDwAIp8/edit?usp=sharing).
