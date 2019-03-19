@@ -36,43 +36,53 @@ Returns a call to amb with `#t` and `#f` as arguments.
  
 `(assign-vals vars)`
  
-Arguments: `vars` - a list of variable names (no duplicates)
+Arguments:
 
-Returns an association list where each cell is in the form of `(variable_name, (get-value))`
+`vars` - a list of variable names (no duplicates)
+
+Returns an association list where each cell is in the form of `(variable_name, (get-value))`.
 
 ---
 
 `(lookup target alist)`
 
-Arguments: `target` - the target variable
+Arguments: 
 
-           `alist` - the association list containing target
+`target` - the target variable
+
+`alist` - the association list containing target
            
-Returns the value associated with the target variable
+Returns the value associated with the target variable.
 
 ---
 
 `(evaluate exp al)`
 
-Arguments: `exp` - a valid boolean expression
+Arguments: 
 
-           `al` - association list corresponding to exp
+`exp` - a valid boolean expression
+
+`al` - association list corresponding to exp
            
-Returns whether `exp` is true of false, based on the current values of the variables, as determined by the association list, `al`
+Returns whether `exp` is true of false, based on the current values of the variables, as determined by the association list, `al`.
 
 ---
 
 `(collect-elements exp)`
 
-Arguments: `exp` - a valid boolean expression
+Arguments:
 
-Returns a list (no duplicates) of all the variables of `exp`
+`exp` - a valid boolean expression
+
+Returns a list (no duplicates) of all the variables of `exp`.
 
 ---
 
 `(satisfiable? exp)`
 
-Arguments: `exp` - a valid boolean expression
+Arguments:
 
-Returns whether `exp` is satisfiable or not
+`exp` - a valid boolean expression
+
+Returns whether `exp` is satisfiable or not.
  
