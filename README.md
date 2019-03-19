@@ -10,20 +10,15 @@ Ambiguous functions were first created by the inventor of the LISP programming l
 The assert function is used alongside the amb operator to create a list of constraints that must be enforced. The assert function takes a predicate as an argument and evaluates it. If the predicate evaluates to true, nothing happens, but when the predicate evaluates to false, any values that were assigned using the amb operator, will automatically back track and be re-assigned. 
 
 ### Examples
+#### Using boolean values
 ```scheme
 (let ((x (amb #t #f)))
   (assert (not x))
   (list x))
   ```
   Output: `(#f)`
-  
-  ```scheme
-  (let ((x (amb #t #f)))
-    (assert x)
-    (list x))
-  ```
-  Output: `(#t)`
-
+ 
+#### Using numbers
  ```scheme
   (let ((x (amb 1 2 3))
         (y (amb 2 3 4)))
