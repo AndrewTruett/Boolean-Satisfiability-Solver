@@ -30,6 +30,7 @@ Output: `(1 2)`
 ## Procedures
 `(get-value)`
   
+  
 Returns a call to amb with `#t` and `#f` as arguments.
  
  ---
@@ -39,6 +40,7 @@ Returns a call to amb with `#t` and `#f` as arguments.
 Arguments:
 
 `vars` - a list of variable names (no duplicates)
+
 
 Returns an association list where each cell is in the form of `(variable_name, (get-value))`.
 
@@ -51,7 +53,8 @@ Arguments:
 `target` - the target variable
 
 `alist` - the association list containing target
-           
+         
+         
 Returns the value associated with the target variable.
 
 ---
@@ -64,6 +67,7 @@ Arguments:
 
 `al` - association list corresponding to exp
            
+           
 Returns whether `exp` is true of false, based on the current values of the variables, as determined by the association list, `al`.
 
 ---
@@ -73,6 +77,7 @@ Returns whether `exp` is true of false, based on the current values of the varia
 Arguments:
 
 `exp` - a valid boolean expression
+
 
 Returns a list (no duplicates) of all the variables of `exp`.
 
@@ -84,5 +89,53 @@ Arguments:
 
 `exp` - a valid boolean expression
 
+
 Returns whether `exp` is satisfiable or not.
  
+---
+
+`(get-solution exp)`
+
+Arguments:
+
+`exp` - a valid boolean expression
+
+
+Returns an association list containing a solution for `exp`
+
+---
+
+`(list-solutions exp)`
+
+Arguments:
+
+`exp` - a valid boolean expression
+
+
+Returns a list containing all the solutions for `exp`
+
+---
+
+`(driver action exp)`
+
+Arguments:
+
+`action` - the desired procedure to be called
+
+`exp` - a valid boolean expression
+
+
+Returns the result of call to the `action` procedure. The driver procedure wraps all other procedures, this is necessary to allow for vectors to maintain state outside of procedure calls. This procedure should be used to call any other procedures.
+
+## Usage
+The procedures of interest in this project are `satisfiable?` and `list-solutions`.
+
+### Supported Boolean Operators
+The supported boolean operators are `AND`, `OR`, `NAND`, `XOR`, `NOT`, and `->`. 
+
+### Examples
+`(driver 'satisfiable? '(a OR b))`
+
+`(driver 'list-solutions '(a OR b))`
+
+Use the `make-and`, `make-or`, etc constructors to create long and complex boolean expressions.
