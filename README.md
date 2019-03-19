@@ -7,4 +7,12 @@ The boolean satisfiability problem (SAT) is a classic problem in computer scienc
 Ambiguous functions were first created by the inventor of the LISP programming language, John McCarthy. The amb operator is a huge asset when creating a non-deterministic alogorithm. The amb operator takes an arbitrary number of arguments and returns one of them. It is not guaranteed which argument will be returned at compile time. The value that gets returned by amb depends on constraints that can be enforced using the assert function.
 
 ### Assert Function
-The assert function is used alongside the amb operator to create a list of constraints that must be enforced.
+The assert function is used alongside the amb operator to create a list of constraints that must be enforced. The assert function takes a predicate as an argument and evaluates it. If the predicate evaluates to true, nothing happens, but when the predicate evaluates to false, any values that were assigned using the amb operator, will automatically back track and be re-assigned. 
+
+### Examples
+```scheme
+(let ((x (amb #t #f)))
+  (assert (not x))
+  (list x))
+  ```
+  Output: `(#f)`
