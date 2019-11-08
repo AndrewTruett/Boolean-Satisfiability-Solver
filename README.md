@@ -68,7 +68,7 @@ Arguments:
 `al` - association list corresponding to exp
            
            
-Returns whether `exp` is true of false, based on the current values of the variables, as determined by the association list, `al`.
+Returns whether `exp` is true or false, based on the current values of the variables, as determined by the association list, `al`.
 
 ---
 
