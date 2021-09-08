@@ -1,4 +1,8 @@
 # A Non-Deterministic Approach to Boolean Satisfiability
+
+
+This project was completed for CSc 335 Programming Language Paradigms at the City College of New York, Spring 2018, by Andrew Truett and Vagan Grigoryan. See the paper [here](https://docs.google.com/document/d/1l-6J6xjwlY66eNgGOIVVk1WFcx1O3dzpxMmplDwAIp8/edit?usp=sharing).
+
 ## Background
 [The boolean satisfiability problem](https://en.wikipedia.org/wiki/Boolean_satisfiability_problem) (SAT) is a classic problem in computer science. Given a boolean expression, the question is whether or not there exists a combination of true/false values for the boolean variables of that expression, such that the expression evaluates to true. For example, `(a AND b)` is satisfiable because there exists a combination of true/false values, namely a is true, and b is true, that results in the expression being true. An example of a non-satisfiable expression is `(a AND (NOT a))`. This is a contradiction, as there is no possible way to select a true/false value such that the expression will evaluate to true.
 
@@ -139,6 +143,3 @@ The supported boolean operators are `AND`, `OR`, `NAND`, `XOR`, `NOT`, and `->`.
 `(driver 'satisfiable? '(a OR b))`
 
 `(driver 'list-solutions '(a OR b))`
-
-## Conclusion
-This project was completed for CSc 335 Programming Language Paradigms at the City College of New York, Spring 2018, by Andrew Truett and Vagan Grigoryan. See the paper [here](https://docs.google.com/document/d/1l-6J6xjwlY66eNgGOIVVk1WFcx1O3dzpxMmplDwAIp8/edit?usp=sharing).
